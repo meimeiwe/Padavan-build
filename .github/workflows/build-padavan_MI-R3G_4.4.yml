@@ -50,6 +50,7 @@ jobs:
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
+        
         exit 1
         fi
         cp -f configs/templates/$TNAME.config .config
