@@ -116,7 +116,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
-        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config #KMS激活
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #KMS激活
         fi
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
@@ -131,5 +131,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: MI-R4A_4.4_20221109
+        name: MI-R3G_4.4_20230309
         path: /opt/images
